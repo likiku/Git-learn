@@ -27,8 +27,16 @@ def exstract_voice (starts_ends, cdir):
     subprocess.run(["ffmpeg", "-i", movie, "-af", "silencedetect=noise=-33dB:d=0.6", "-f", "null", "-"])
 
 
+def judge_os ():
+    return os.name
+
+
 if __name__ == '__main__':
-    cdir = r"P:\video-stream-edit"
+    if judge_os == "nt":
+        cdir = r"P:\video-stream-edit"
+    elif judge_os == "posix":
+        cdir = "/home/video-edit/resource"
+
     movie = "Terracehouse.mp4"
     starts_ends = mk_starts_ends(cdir, movie)
     exstract_voice(starts_ends)
