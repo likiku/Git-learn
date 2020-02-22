@@ -20,6 +20,8 @@ def mk_starts_ends (cdir, movie) :
                     time_list.append(float(end_time[:-2]))
     print(time_list)
     return time_list
+    #ありがとうございます
+    
 
 
 def exstract_voice (starts_ends, cdir):
