@@ -21,7 +21,7 @@ def mk_starts_ends (cdir, movie) :
     print(time_list)
     return time_list
     #ありがとうございます
-    
+
 
 
 def exstract_voice (starts_ends, cdir):
@@ -34,3 +34,8 @@ if __name__ == '__main__':
     movie = "Terracehouse.mp4"
     starts_ends = mk_starts_ends(cdir, movie)
     exstract_voice(starts_ends)
+
+if chocolate >= coffee:
+    print("美味しいは正義だなぁ")
+    else:
+        print("結局甘いものって最高")
